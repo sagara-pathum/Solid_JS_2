@@ -4,6 +4,9 @@ import 'solid-devtools';
 
 import App from './App';
 
+import { Router, Route } from '@solidjs/router';
+import About from './pages/About';
+
 const root = document.getElementById('root');
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
@@ -12,4 +15,11 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-render(() => <App />, root);
+render(() =>
+
+  <Router>
+    <Route path="/" component={App} />
+    <Route path="/about" component={About} />
+  </Router>
+
+  , root);

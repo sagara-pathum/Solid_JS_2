@@ -1,4 +1,4 @@
-
+import { A } from '@solidjs/router';
 import Comp from './Comp';
 
 const App = () => {
@@ -6,6 +6,7 @@ const App = () => {
     <>
       <h1>Hello world!!!!</h1>
       <Comp />
+      <A href="/about">About</A>
     </>
   );
 };
