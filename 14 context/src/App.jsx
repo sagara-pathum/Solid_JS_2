@@ -1,12 +1,12 @@
 import { A } from '@solidjs/router';
 import Comp from './Comp';
-import { useContext, createSignal } from 'solid-js';
+import { createSignal } from 'solid-js';
 
-import { myContext } from './context/MyContextProvider';
+import { useMyContext } from './context/MyContextProvider';
 
 const App = () => {
 
-  const { person, setPerson } = useContext(myContext);
+  const { person, setPerson } = useMyContext();
 
   const [newAge, setNewAge] = createSignal('');
 

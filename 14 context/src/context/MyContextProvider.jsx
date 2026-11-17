@@ -1,4 +1,4 @@
-import { createContext } from "solid-js";
+import { createContext, useContext } from "solid-js";
 import { createStore } from "solid-js/store";
 
 export const myContext = createContext();
@@ -15,4 +15,8 @@ export function MyContextProvider(props) {
             {props.children}
         </myContext.Provider>
     );
+}
+
+export function useMyContext() {
+    return (useContext(myContext));
 }

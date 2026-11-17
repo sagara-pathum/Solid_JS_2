@@ -1,10 +1,9 @@
 import { A } from '@solidjs/router';
-import { useContext } from 'solid-js';
-import { myContext } from '../context/MyContextProvider';
+import { useMyContext } from '../context/MyContextProvider';
 
 export default () => {
 
-    const { person } = useContext(myContext);
+    const { person } = useMyContext();
 
     return (
         <div>
