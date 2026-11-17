@@ -1,8 +1,8 @@
-const { createContext } = require("solid-js");
-const { createStore } = require("solid-js/store");
+import { createContext } from "solid-js";
+import { createStore } from "solid-js/store";
 
 
-export const myContext = createContext;
+export const myContext = createContext();
 
 export function MyContextProvider(props) {
 
@@ -12,7 +12,7 @@ export function MyContextProvider(props) {
     });
 
     return (
-        <myContext.Provider values={{ person, setPerson }} >
+        <myContext.Provider value={{ person, setPerson }}>
             {props.children}
         </myContext.Provider>
     );
